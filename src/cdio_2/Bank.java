@@ -1,6 +1,6 @@
 package cdio_2;
 
-public class Account {
+public class Bank {
 
 	
 	
