@@ -2,8 +2,11 @@ package cdio_2;
 
 public class Player {
 private String name;
-	public String createplayer(){
+	public void createplayer(){
 		String name="input";
+	}
+	public String getplayername(){
 		return name;
 	}
+	
 }
