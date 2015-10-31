@@ -1,7 +1,7 @@
 package cdio_2;
 
 public class Game {
-	private Scanner scan = new Scanner(System.in);
+	private java.util.Scanner scan = new java.util.Scanner(System.in);
 	private Dice dice = new Dice();
 	private Player p1, p2;
 	public static void main(String[] args) {
