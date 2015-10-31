@@ -3,7 +3,7 @@ package cdio_2;
 public class Printer {
 public void print(){
 	Dice dice= new Dice();
-//println funktionerne skal udfyldes med tilhørene felt tekst
+	//amount skal erstates med et kald der høre til det enkelte felts point uddeling (metode kald).
 switch(dice.getsum()){
 case 2:
 	//tower
