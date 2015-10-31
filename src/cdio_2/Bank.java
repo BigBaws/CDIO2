@@ -17,4 +17,7 @@ public int lose(){
 	balance=balance-amount;
 	return balance;
 }
+public int getbalance(){
+	return balance;
+}
 }
