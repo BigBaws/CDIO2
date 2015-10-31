@@ -9,12 +9,8 @@ public Bank(){
 	balance=1000;
 		}
 //amount skal erstates med et kald der høre til det enkelte felts point uddeling (metode kald).
-public int gain(){
-	balance=balance+amount;
-	return balance;
-}
-public int lose(){
-	balance=balance-amount;
+public int change(){
+balance=balance+amount;
 	return balance;
 }
 public int getbalance(){
