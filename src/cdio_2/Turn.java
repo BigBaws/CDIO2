@@ -2,9 +2,12 @@ package cdio_2;
 
 public class Turn {
 Dice dice = new Dice();
+Printer printer= new Printer();
+
 private int points;
 public int round(){
 	dice.rolldice();
+	printer.print(dice.getsum());
 	switch (dice.getsum()){
 	case 2:
 		points= 250;
