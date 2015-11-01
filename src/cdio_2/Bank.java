@@ -9,9 +9,10 @@ public Bank(){
 	balance=1000;
 		}
 //amount skal erstates med et kald der høre til det enkelte felts point uddeling (metode kald).
-public int change(){
+public void change(int amount){
 balance=balance+amount;
-	return balance;
+if (balance<0)
+	balance=0;
 }
 public int getbalance(){
 	return balance;
