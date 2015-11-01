@@ -31,6 +31,7 @@ public int round(){
 		points= 60;
 		break;
 	case 10:
+		//input pause til manuelt ekstra slag.
 		points=-80+round();
 		break;
 	case 11:
