@@ -13,19 +13,19 @@ public Game(){
 	p1 = new Player(scan.nextLine());
 	System.out.println("player 2 enter your name");
 	p2= new Player(scan.nextLine());
-while (b1.getbalance()<3000 && b2.getbalance()<3000){
+while (p1.getpoints()<3000 && p2.getpoints()<3000){
 	System.out.println(p1.getplayername()+"Roll Dice");
-	b1.change(turn.round());
+	p1.changepoints(turn.round());
 	System.out.println(p2.getplayername()+"Roll Dice");	
-	b2.change(turn.round());
+	p2.changepoints(turn.round());
 	
 }
-if(b1.getbalance()>=3000 && b2.getbalance()>=3000)
+if(p1.getpoints()>=3000 && p2.getpoints()>=3000)
 	System.out.println("simultaniuos victory, sadly this counts as a tie");
-else if(b1.getbalance()>=3000)
-	System.out.println("Congratulations "+p1.getplayername()+" you are victorious with "+b1.getbalance());
+else if(p1.getpoints()>=3000)
+	System.out.println("Congratulations "+p1.getplayername()+" you are victorious with "+p1.getpoints());
 else
-	System.out.println("Congratulations "+p2.getplayername()+" you are victorious with "+b2.getbalance());
+	System.out.println("Congratulations "+p2.getplayername()+" you are victorious with "+p2.getpoints());
 	}
 }
 	
