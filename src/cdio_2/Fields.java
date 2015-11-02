@@ -1,9 +1,9 @@
 package cdio_2;
 import java.awt.Color;
 import desktop_fields.Start;
+import desktop_resources.GUI;
 import desktop_fields.Field;
 import desktop_fields.Shipping;
-import desktop_resources.GUI;
 public class Fields {
 	int fieldvalue;
     String fieldtext;
@@ -94,5 +94,6 @@ public class Fields {
 			.setBgColor(Color.YELLOW)
             .setRent("650")
 			.build();
+	GUI.create(fields);
 }
 }
