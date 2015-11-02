@@ -3,7 +3,6 @@ package cdio_2;
 public class Game {
 	private java.util.Scanner scan = new java.util.Scanner(System.in);
 	private Player p1, p2;
-	private Bank b1,b2;
 	private Turn turn;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
