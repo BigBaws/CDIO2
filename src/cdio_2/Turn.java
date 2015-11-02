@@ -1,5 +1,7 @@
 package cdio_2;
 
+import desktop_resources.GUI;
+
 public class Turn {
 Dice dice = new Dice();
 Printer printer= new Printer();
@@ -7,6 +9,7 @@ Printer printer= new Printer();
 private int points;
 public int round(){
 	dice.rolldice();
+	GUI.setDice(dice.getdie1value(), dice.getdie2value());
 	printer.print(dice.getsum());
 	switch (dice.getsum()){
 	case 2:
