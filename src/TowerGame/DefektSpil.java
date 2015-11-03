@@ -14,8 +14,8 @@ public class DefektSpil
 				while (true)     // Det hele er i en while lykke, så spilleren kan få en ekstra tur, hvis han slår 10
 				{
 					System.out.println("Player1 rolls the dice");
-					Terning kast = new Terning();
-					terning = kast.kast();
+					Dice kast = new Dice();
+					terning = kast.roll();
 					
 					if (terning == 2)
 					{
@@ -83,8 +83,8 @@ public class DefektSpil
 				while (true)     // Samme grund til while lykke som før
 				{
 					System.out.println("Player2 rolls the dice");
-					Terning kast = new Terning();
-					terning = kast.kast();
+					Dice kast = new Dice();
+					terning = kast.roll();
 						
 					if (terning == 2)
 					{

@@ -1,8 +1,8 @@
 package TowerGame;
 
-public class Terning 
+public class Dice 
 {
-	public int kast()
+	public int roll()
 	{
 		int resultat = ((int) (Math.random()*6)+1);
 		return resultat;

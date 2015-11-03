@@ -36,13 +36,4 @@ public class Player
 		}
 	}
 	
-
-//	public void setPoints(int points)
-//	{
-//		b.addscore(points);
-//		if (b.getscore() < 0)
-//		{
-//			b.addscore(0);
-//		}
-//	}
 }

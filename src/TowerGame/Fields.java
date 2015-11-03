@@ -8,12 +8,12 @@ import desktop_fields.Start;
 import desktop_fields.Street;
 import desktop_resources.GUI;
 
-public class Felt 
+public class Fields 
 {
 	private String navn;
 	private int værdi;
 	
-	public Felt(String navn, int værdi) 
+	public Fields(String navn, int værdi) 
 	{
 		this.navn = navn;
 		this.værdi = værdi;
@@ -24,14 +24,14 @@ public class Felt
 		return navn;
 	}
 
-	public int getVærdi() 
+	public int getValue() 
 	{
 		return værdi;
 	}
 	
 	
 	
-	public Felt() 
+	public Fields() 
 	{
 	Field[] fields = new Field[12];
 	Color color = Color.RED;
