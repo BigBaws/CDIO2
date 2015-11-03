@@ -3,7 +3,7 @@ package TowerGame;
 import desktop_codebehind.Car;
 import desktop_resources.GUI;
 
-public class Spillet 
+public class Game 
 
 {
 //	private Player p1, p2;
@@ -12,18 +12,12 @@ public class Spillet
 	public static void main(String[] args) 
 	
 	{
-//		Score score = new Score();
-//		Felter felt = new Felter();
+
 		
 		new Fields();
 		java.util.Scanner tastatur = new java.util.Scanner(System.in);
-//		Bank score = new Bank();
-//		int terning1;
-//		int terning2;
-//		int terning;
 
-//		p1 = new Player(scan.nextLine());
-//		GUI.getUserString("Name");	
+
 //		GUI.getUserSelection("Choose your avatar", "selection1", "selection2");
 		String player1navn = GUI.getUserString("Choose your name player 1");
 		Player p1 = new Player(player1navn);
@@ -64,8 +58,6 @@ public class Spillet
 		
 
 
-//		
-//		
 //		list[terning].getNavn();
 //		list[terning].getVærdi();
 		
