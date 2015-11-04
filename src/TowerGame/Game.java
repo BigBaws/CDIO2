@@ -19,29 +19,46 @@ public class Game
 
 
 //		GUI.getUserSelection("Choose your avatar", "selection1", "selection2");
-		String player1navn = GUI.getUserString("Choose your name player 1");
-		Player p1 = new Player(player1navn);
-		String player2navn = GUI.getUserString("Choose your name player 2");
-		Player p2 = new Player(player2navn);
 		
-		GUI.addPlayer(p1.getName(), p1.getPoints());
+		String player1Name = GUI.getUserString("Choose your name player 1");
+
+		if (player1Name.equals(""))
+		{
+			player1Name = "Player 1";
+			GUI.displayChanceCard("No name input for player 1, default has been set");
+			GUI.showMessage("");
+		}
+		String player2Name = GUI.getUserString("Choose your name player 2");
+		if (player2Name.equals(""))
+		{
+			player2Name = "Player 2";
+			GUI.displayChanceCard("No name input for player 2, default has been set");
+			GUI.showMessage("");
+		}
+		Player p1 = new Player(player1Name);
+
+		Player p2 = new Player(player2Name);
+		
+		
+		
+
 		GUI.addPlayer(p2.getName(), p2.getPoints());
-
+		GUI.addPlayer(p1.getName(), p1.getPoints());
 		
 
-		list = new Fields [13];               // definerer samtlige felter, som jeg kan bruge senere:
+		list = new Fields [13];         // definerer samtlige felter, som jeg kan bruge senere, samt tilføjer tekst:
 		list [1] = new Fields ("Start",0);
-		list [2] = new Fields ("Tower",250);
-		list [3] = new Fields ("Crater",-100);
-		list [4] = new Fields ("Palace Gates",100);
-		list [5] = new Fields ("Cold Desert" , -20);
-		list [6] = new Fields ("Walled City" , 180);
-		list [7] = new Fields ("Monestary" , 0);
-		list [8] = new Fields ("Black Cave" , -70);
-		list [9] = new Fields ("Huts in the mountain" , 60);
-		list [10] = new Fields ("The Werewall" , -80);
-		list [11] = new Fields ("The Pit" , -50);
-		list [12] = new Fields ("Goldmine" , 650);
+		list [2] = new Fields ("Tower, which is really really tall",250);
+		list [3] = new Fields ("Crater, which is really really deep",-100);
+		list [4] = new Fields ("Palace Gates, which are really really strong",100);
+		list [5] = new Fields ("Cold Desert which is really really cold" , -20);
+		list [6] = new Fields ("Walled City which is really really walled in" , 180);
+		list [7] = new Fields ("Monestary which is really really full of bald people" , 0);
+		list [8] = new Fields ("Black Cave which is really really dark" , -70);
+		list [9] = new Fields ("Huts in the mountain which are really really small" , 60);
+		list [10] = new Fields ("The Werewall which is really really scary" , -80);
+		list [11] = new Fields ("The Pit which is also really really deep, but not as deep as the crater" , -50);
+		list [12] = new Fields ("Goldmine... which gets you really really rich" , 650);
 		
 
 		GUI.displayChanceCard(p1.getName()+ " starts");
@@ -86,7 +103,7 @@ public class Game
 			GUI.setCar(diceSum, playerName);
 			
 			
-			if (list[diceSum].getValue()>0)              // Følgende er primært da det lyder forkert at sige "gaining -80" point
+			if (list[diceSum].getValue()>0)     // Følgende er primært da det lyder forkert at sige "gaining -80" point
 			{
 				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+", gaining "+list[diceSum].getValue()+" coins, he now has " +p.getPoints()+ ", coins");
 			}
