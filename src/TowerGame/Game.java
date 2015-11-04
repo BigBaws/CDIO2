@@ -47,18 +47,18 @@ public class Game
 		
 
 		list = new Fields [13];         // definerer samtlige felter, som jeg kan bruge senere, samt tilføjer tekst:
-		list [1] = new Fields ("Start",0);
+		list [1] = new Fields ("You start your journey",0);
 		list [2] = new Fields ("Tower, which is really really tall",250);
-		list [3] = new Fields ("Crater, which is really really deep",-100);
-		list [4] = new Fields ("Palace Gates, which are really really strong",100);
-		list [5] = new Fields ("Cold Desert which is really really cold" , -20);
-		list [6] = new Fields ("Walled City which is really really walled in" , 180);
-		list [7] = new Fields ("Monestary which is really really full of bald people" , 0);
-		list [8] = new Fields ("Black Cave which is really really dark" , -70);
-		list [9] = new Fields ("Huts in the mountain which are really really small" , 60);
-		list [10] = new Fields ("The Werewall which is really really scary" , -80);
-		list [11] = new Fields ("The Pit which is also really really deep, but not as deep as the crater" , -50);
-		list [12] = new Fields ("Goldmine... which gets you really really rich" , 650);
+		list [3] = new Fields ("the crater, which is really really deep",-100);
+		list [4] = new Fields ("the grand Palace Gates",100);
+		list [5] = new Fields ("Cold Desert where you have to buy a camel in order to get out" , -20);
+		list [6] = new Fields ("Walled City where the residents help you out" , 180);
+		list [7] = new Fields ("Monestary. The monks let you rest for free" , 0);
+		list [8] = new Fields ("Black Cave where you panic and lose some gold" , -70);
+		list [9] = new Fields ("Huts in the mountain, where the local residents help you out" , 60);
+		list [10] = new Fields ("The Werewall, which is really scary, giving you an extra turn to get out" , -80);
+		list [11] = new Fields ("The Pit where you have to pay a few people to get you out" , -50);
+		list [12] = new Fields ("Goldmine... You're about to be rich" , 650);
 		
 
 		GUI.displayChanceCard(p1.getName()+ " starts");
@@ -105,13 +105,12 @@ public class Game
 			
 			if (list[diceSum].getValue()>0)     // Følgende er primært da det lyder forkert at sige "gaining -80" point
 			{
-				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+", gaining "+list[diceSum].getValue()+" coins, he now has " +p.getPoints()+ ", coins");
+				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+". "+playerName+" gained "+list[diceSum].getValue()+" coins, and now has " +p.getPoints()+ " coins");
 			}
 			else if (list[diceSum].getValue()<=0)
 			{
-				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+", losing "+list[diceSum].getValue()*-1+" coins, he now has " +p.getPoints()+ ", coins");
-			}
-			
+				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+". "+playerName+" lost "+list[diceSum].getValue()*-1+" coins, and now has " +p.getPoints()+ " coins");
+			}			
 			if (diceSum != 10)
 			{
 				break;
