@@ -1,4 +1,4 @@
-package nicki;
+package TowerGame;
 
 import static org.junit.Assert.*;
 
@@ -10,18 +10,27 @@ public class JUnitTest {
 
 
 	@Test
-	public void StartBelÃ¸b() {
+	public void StartBeløb() 
+	{
 
 		assertEquals(1000, p.getPoints());
 	}
 
 
 	@Test
-	public void NegativtPoint() {
+	public void NegativtPoint() 
+	{
 
-		p.setPoints(-100);
+		p.setScore(-100);
 		assertEquals(0, p.getPoints());
 	}
 
-
+	@Test
+	public void x()
+	{
+		
+	}
+	
+	
+	
 }

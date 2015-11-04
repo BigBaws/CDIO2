@@ -16,6 +16,6 @@ public class Bank
 	
 	public void setscore (int score) 
 	{
-		this.score += score;
+		this.score = score;
 	}
 }

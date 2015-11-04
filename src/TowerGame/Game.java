@@ -97,7 +97,7 @@ public class Game
 			int dice1 = dice[0].roll();
 			int dice2 = dice[1].roll();
 			int diceSum = dice1 + dice2;
-			p.setScore(list[diceSum].getValue());
+			p.setScore(list[diceSum].getValue()+p.getPoints());
 			GUI.setBalance(playerName, p.getPoints());
 			GUI.setDice(dice1, dice2);
 			GUI.setCar(diceSum, playerName);
