@@ -10,23 +10,23 @@ import desktop_resources.GUI;
 
 public class Fields 
 {
-	private String navn;
-	private int værdi;
+	private String name;
+	private int value;
 	
-	public Fields(String navn, int værdi) 
+	public Fields(String name, int value) 
 	{
-		this.navn = navn;
-		this.værdi = værdi;
+		this.name = name;
+		this.value = value;
 	}
 
 	public String getNavn() 
 	{
-		return navn;
+		return name;
 	}
 
 	public int getValue() 
 	{
-		return værdi;
+		return value;
 	}
 	
 	
@@ -37,9 +37,9 @@ public class Fields
 	Color color = Color.RED;
 		fields[0] = new Street.Builder()
 				.setTitle("START")
-				.setDescription(" ")
+				.setDescription("")
 				.setSubText("1")
-				.setBgColor(Color.blue)
+				.setBgColor(Color.white)
 				.build();
 				
 				
@@ -47,21 +47,21 @@ public class Fields
 				.setTitle("Tower")
 				.setDescription("")
 				.setSubText("2")
-				.setBgColor(color)
+				.setBgColor(Color.CYAN)
 				.build();
 		
 		fields[2] = new Street.Builder()
 				.setTitle("Crater")
 				.setDescription("")
 				.setSubText("3")
-				.setBgColor(color)
+				.setBgColor(Color.GRAY)
 				.build();
 
 		fields[3] = new Street.Builder()
 				.setTitle("Palace Gates")
 				.setDescription("")
 				.setSubText("4")
-				.setBgColor(color)
+				.setBgColor(Color.blue)
 				.build();
 
 		fields[4] = new Street.Builder()

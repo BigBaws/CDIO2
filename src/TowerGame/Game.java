@@ -19,29 +19,46 @@ public class Game
 
 
 //		GUI.getUserSelection("Choose your avatar", "selection1", "selection2");
-		String player1navn = GUI.getUserString("Choose your name player 1");
-		Player p1 = new Player(player1navn);
-		String player2navn = GUI.getUserString("Choose your name player 2");
-		Player p2 = new Player(player2navn);
 		
-		GUI.addPlayer(p1.getName(), p1.getPoints());
+		String player1Name = GUI.getUserString("Choose your name player 1");
+
+		if (player1Name.equals(""))
+		{
+			player1Name = "Player 1";
+			GUI.displayChanceCard("No name input for player 1, default has been set");
+			GUI.showMessage("");
+		}
+		String player2Name = GUI.getUserString("Choose your name player 2");
+		if (player2Name.equals(""))
+		{
+			player2Name = "Player 2";
+			GUI.displayChanceCard("No name input for player 2, default has been set");
+			GUI.showMessage("");
+		}
+		Player p1 = new Player(player1Name);
+
+		Player p2 = new Player(player2Name);
+		
+		
+		
+
 		GUI.addPlayer(p2.getName(), p2.getPoints());
-
+		GUI.addPlayer(p1.getName(), p1.getPoints());
 		
 
-		list = new Fields [13];               // definerer samtlige felter, som jeg kan bruge senere:
-		list [1] = new Fields ("Start",0);
-		list [2] = new Fields ("Tower",250);
-		list [3] = new Fields ("Crater",-100);
-		list [4] = new Fields ("Palace Gates",100);
-		list [5] = new Fields ("Cold Desert" , -20);
-		list [6] = new Fields ("Walled City" , 180);
-		list [7] = new Fields ("Monestary" , 0);
-		list [8] = new Fields ("Black Cave" , -70);
-		list [9] = new Fields ("Huts in the mountain" , 60);
-		list [10] = new Fields ("The Werewall" , -80);
-		list [11] = new Fields ("The Pit" , -50);
-		list [12] = new Fields ("Goldmine" , 650);
+		list = new Fields [13];         // definerer samtlige felter, som jeg kan bruge senere, samt tilføjer tekst:
+		list [1] = new Fields ("You start your journey",0);
+		list [2] = new Fields ("Tower, which is really really tall",250);
+		list [3] = new Fields ("the crater, which is really really deep",-100);
+		list [4] = new Fields ("the grand Palace Gates",100);
+		list [5] = new Fields ("Cold Desert where you have to buy a camel in order to get out" , -20);
+		list [6] = new Fields ("Walled City where the residents help you out" , 180);
+		list [7] = new Fields ("Monestary. The monks let you rest for free" , 0);
+		list [8] = new Fields ("Black Cave where you panic and lose some gold" , -70);
+		list [9] = new Fields ("Huts in the mountain, where the local residents help you out" , 60);
+		list [10] = new Fields ("The Werewall, which is really scary, giving you an extra turn to get out" , -80);
+		list [11] = new Fields ("The Pit where you have to pay a few people to get you out" , -50);
+		list [12] = new Fields ("Goldmine... You're about to be rich" , 650);
 		
 
 		GUI.displayChanceCard(p1.getName()+ " starts");
@@ -86,15 +103,14 @@ public class Game
 			GUI.setCar(diceSum, playerName);
 			
 			
-			if (list[diceSum].getValue()>0)              // Følgende er primært da det lyder forkert at sige "gaining -80" point
+			if (list[diceSum].getValue()>0)     // Følgende er primært da det lyder forkert at sige "gaining -80" point
 			{
-				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+", gaining "+list[diceSum].getValue()+" coins, he now has " +p.getPoints()+ ", coins");
+				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+". "+playerName+" gained "+list[diceSum].getValue()+" coins, and now has " +p.getPoints()+ " coins");
 			}
 			else if (list[diceSum].getValue()<=0)
 			{
-				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+", losing "+list[diceSum].getValue()*-1+" coins, he now has " +p.getPoints()+ ", coins");
-			}
-			
+				GUI.displayChanceCard(playerName+" rolled a " +diceSum+ " landing on "+list[diceSum].getNavn()+". "+playerName+" lost "+list[diceSum].getValue()*-1+" coins, and now has " +p.getPoints()+ " coins");
+			}			
 			if (diceSum != 10)
 			{
 				break;
