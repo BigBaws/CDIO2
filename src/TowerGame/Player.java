@@ -6,8 +6,6 @@ public class Player
 	private Bank b = new Bank();
 	private String name;
 
-//	private int score = 1000;
-
 	public Player(String name) 
 	{
 		this.name = name;

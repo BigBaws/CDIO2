@@ -46,13 +46,18 @@ public class Game
 
 		GUI.displayChanceCard(p1.getName()+ " starts");
 
+		
 		while (p1.getPoints() <= 3000 || p1.getPoints() <= 3000)
 		{
 			tur(p1);
 			tur(p2);
 			
 		}
-			
+		if (p1.getPoints() >= 3000) {
+			GUI.displayChanceCard(p1.getName()+" won - Congratulations!");
+		} else {
+			GUI.displayChanceCard(p2.getName()+" won - Congratulations!");
+		}
 
 	
 		
@@ -79,7 +84,7 @@ public class Game
 			GUI.setBalance(playerName, p.getPoints());
 			GUI.setDice(dice1, dice2);
 			GUI.setCar(diceSum, playerName);
-		
+			
 			
 			if (list[diceSum].getValue()>0)              // Følgende er primært da det lyder forkert at sige "gaining -80" point
 			{
