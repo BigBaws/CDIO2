@@ -68,49 +68,49 @@ public class Fields
 				.setTitle("Cold Desert")
 				.setDescription("")
 				.setSubText("5")
-				.setBgColor(color)
+				.setBgColor(Color.green)
 				.build();
 
 		fields[5] = new Street.Builder()
 				.setTitle("Walled City")
 				.setDescription("")
 				.setSubText("6")
-				.setBgColor(color)
+				.setBgColor(Color.magenta)
 				.build();
 
 		fields[6] = new Street.Builder()
 				.setTitle("Monestary")
 				.setDescription("")
 				.setSubText("7")
-				.setBgColor(color)
+				.setBgColor(Color.pink)
 				.build();
 
 		fields[7] = new Street.Builder()
 				.setTitle("Black Cave")
 				.setDescription("")
 				.setSubText("8")
-				.setBgColor(color)
+				.setBgColor(Color.darkGray)
 				.build();
 
 		fields[8] = new Street.Builder()
 				.setTitle("Huts in the mountains")
 				.setDescription("")
 				.setSubText("9")
-				.setBgColor(color)
+				.setBgColor(Color.yellow)
 				.build();
 
 		fields[9] = new Street.Builder()
 				.setTitle("The Werewall")
 				.setDescription("")
 				.setSubText("10")
-				.setBgColor(color)
+				.setBgColor(Color.WHITE)
 				.build();
 
 		fields[10] = new Street.Builder()
 				.setTitle("The Pit")
 				.setDescription("")
 				.setSubText("11")
-				.setBgColor(color)
+				.setBgColor(Color.orange)
 				.build();
 
 		fields[11] = new Street.Builder()

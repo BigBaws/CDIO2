@@ -29,7 +29,8 @@ public class Player
 	public void setScore(int score) 
 	{
 		b.setscore(score);
-		if (b.getscore() < 0) {
+		if (b.getscore() < 0) 
+		{
 			b.setscore(0);
 		}
 	}
