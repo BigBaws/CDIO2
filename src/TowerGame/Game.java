@@ -15,9 +15,9 @@ public class Game
 
 		
 		new Fields();
-		java.util.Scanner tastatur = new java.util.Scanner(System.in);
-
-
+//		java.util.Scanner tastatur = new java.util.Scanner(System.in);
+ 
+		
 //		GUI.getUserSelection("Choose your avatar", "selection1", "selection2");
 		
 		String player1Name = GUI.getUserString("Choose your name player 1");
@@ -64,15 +64,22 @@ public class Game
 		GUI.displayChanceCard(p1.getName()+ " starts");
 
 		
-		while (p1.getPoints() <= 3000 || p1.getPoints() <= 3000)
+		while (p1.getPoints() <= 3000 && p2.getPoints() <= 3000)
 		{
 			tur(p1);
 			tur(p2);
 			
 		}
-		if (p1.getPoints() >= 3000) {
+		if (p1.getPoints() >= 3000 && p2.getPoints() >= 3000)
+		{
+			GUI.displayChanceCard("Both players got 3000 coins, it's a tie!");
+		}
+		else if (p1.getPoints() >= 3000) 
+		{
 			GUI.displayChanceCard(p1.getName()+" won - Congratulations!");
-		} else {
+		}
+		else
+		{
 			GUI.displayChanceCard(p2.getName()+" won - Congratulations!");
 		}
 
