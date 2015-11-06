@@ -6,7 +6,7 @@ import desktop_resources.GUI;
 public class Game 
 
 {
-//	private Player p1, p2;
+
 	private static Fields[] list;
 	private static Dice[] dice = { new Dice(), new Dice() };
 	public static void main(String[] args) 
@@ -14,15 +14,15 @@ public class Game
 	{
 
 		
-		new Fields();
-//		java.util.Scanner tastatur = new java.util.Scanner(System.in);
- 
+		new Fields(); 
 		
-//		GUI.getUserSelection("Choose your avatar", "selection1", "selection2");
-		
+
+		Player p1, p2;             // Er til for at nedenstående linje vil fungere.
+		if(args.length == 0)       // Er kun til for at lave en JUnitTest.
+		{
 		String player1Name = GUI.getUserString("Choose your name player 1");
 
-		if (player1Name.equals(""))
+		if (player1Name.equals("")) // Spiller 1 bliver oprettet i GUI'en
 		{
 			player1Name = "Player 1";
 			GUI.displayChanceCard("No name input for player 1, default has been set");
@@ -35,11 +35,23 @@ public class Game
 			GUI.displayChanceCard("No name input for player 2, default has been set");
 			GUI.showMessage("");
 		}
-		Player p1 = new Player(player1Name);
+		p1 = new Player(player1Name);
 
-		Player p2 = new Player(player2Name);
+		p2 = new Player(player2Name);
 		
+		} 
+		else                       // Er kun til for at lave en JUnitTest
+		{
+			p1 = new Player(args[0]);
+			int i = Integer.parseInt(args[1]);
+			p1.setScore(i);
+
+			p2 = new Player(args[2]);
+			int u = Integer.parseInt(args[3]);
+			p2.setScore(u);
+			
 		
+		}
 		
 
 		GUI.addPlayer(p2.getName(), p2.getPoints());
@@ -64,7 +76,7 @@ public class Game
 		GUI.displayChanceCard(p1.getName()+ " starts");
 
 		
-		while (p1.getPoints() <= 3000 && p2.getPoints() <= 3000)
+		while (p1.getPoints() < 3000 && p2.getPoints() < 3000)
 		{
 			tur(p1);
 			tur(p2);

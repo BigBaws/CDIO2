@@ -27,7 +27,7 @@ public class JUnitTest {
 	
 	public void TestAfFelt2()
 	{
-		list = new Fields [3];         // definerer samtlige felter, som jeg kan bruge senere, samt tilføjer tekst:
+		list = new Fields [3]; 
 		list [1] = new Fields ("You start your journey",0);
 		list [2] = new Fields ("Tower, which is really really tall",250);
 		int diceSum = 2;
@@ -35,7 +35,10 @@ public class JUnitTest {
 		assertEquals(1250, p.getPoints());
 		
 	}
-	
+	public void TestAfVinder()
+	{
+		Game.main(new String[] {"p1", "3000", "p2", "1000"});
+	}
 	
 	
 	
