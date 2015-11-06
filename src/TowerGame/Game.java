@@ -14,7 +14,9 @@ public class Game
 	{
 
 		
+
 		new Fields(); 
+
 		
 
 		Player p1, p2;             // Er til for at nedenstående linje vil fungere.
@@ -76,7 +78,9 @@ public class Game
 		GUI.displayChanceCard(p1.getName()+ " starts");
 
 		
+
 		while (p1.getPoints() < 3000 && p2.getPoints() < 3000)
+
 		{
 			tur(p1);
 			tur(p2);
