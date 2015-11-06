@@ -12,7 +12,6 @@ public class JUnitTest {
 	@Test
 	public void StartBeløb() 
 	{
-
 		assertEquals(1000, p.getPoints());
 	}
 
@@ -20,16 +19,23 @@ public class JUnitTest {
 	@Test
 	public void NegativtPoint() 
 	{
-
 		p.setScore(-100);
 		assertEquals(0, p.getPoints());
 	}
-
+	private static Fields[] list;
 	@Test
-	public void x()
+	
+	public void TestAfFelt2()
 	{
+		list = new Fields [3];         // definerer samtlige felter, som jeg kan bruge senere, samt tilføjer tekst:
+		list [1] = new Fields ("You start your journey",0);
+		list [2] = new Fields ("Tower, which is really really tall",250);
+		int diceSum = 2;
+		p.setScore(list[diceSum].getValue()+p.getPoints());
+		assertEquals(1250, p.getPoints());
 		
 	}
+	
 	
 	
 	
